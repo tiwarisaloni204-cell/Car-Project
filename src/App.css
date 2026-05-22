@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+box-sizing: border-box;
+}
+body{
+    color:black;
+    background: ghostwhite;
+    font-family: sans-serif;
+
+}
+
+
+#CarContainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    align-items:center;
+    padding: 10px;
+}
+
+.Card{
+    width:300px;
+    border:1px solid black;
+    border-radius:10px;
+    padding:10px;
+    background-color:white;
+    box-shadow:0px 2px 5px rgba(0,0,0,0.3);
+    overflow:hidden;
+    text-align:center;
+}
+.Card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.Card h2 {
+    margin: 10px ;
+    font-size:18px;
+    color: #333;
+}
+.Card p {
+    font-size:10px;
+    color: #666;
+    margin-left:10px;
+    font-size:15px;
+}
+.Card button {
+    margin-top:10px;
+    margin-left:10px;
+    padding:10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius:11px;
+    cursor: pointer;
+}
+.Card button:hover {
+    background-color: #0056b3;
+}
