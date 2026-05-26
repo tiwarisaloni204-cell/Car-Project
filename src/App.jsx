@@ -1,57 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import "./App.css"
 export default function App() {
-  let [data ,setdata] = useState([
-   {
-    id:101,
-    poster:"https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2021/07/08/f807fca0-7882-476e-9c2b-0123b6797b90_9b321643.jpg",
-    Brand:"bugati",
-    Model:"veyron",
-    Price:1000000,
-    speed:400,
-  },
-  {
-    id:101,
-    poster:"https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2021/07/08/f807fca0-7882-476e-9c2b-0123b6797b90_9b321643.jpg",
-    Brand:"bugati",
-    Model:"veyron",
-    Price:1000000,
-    speed:400,
-  },
-  {
-    id:101,
-    poster:"https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2021/07/08/f807fca0-7882-476e-9c2b-0123b6797b90_9b321643.jpg",
-    Brand:"bugati",
-    Model:"veyron",
-    Price:1000000,
-    speed:400,
-  },
-  {
-    id:101,
-    poster:"https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2021/07/08/f807fca0-7882-476e-9c2b-0123b6797b90_9b321643.jpg",
-    Brand:"bugati",
-    Model:"veyron",
-    Price:1000000,
-    speed:400,
-  },
-   {
-    id:101,
-    poster:"https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2021/07/08/f807fca0-7882-476e-9c2b-0123b6797b90_9b321643.jpg",
-    Brand:"bugati",
-    Model:"veyron",
-    Price:1000000,
-    speed:400,
-  },
-   {
-    id:101,
-    poster:"https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2021/07/08/f807fca0-7882-476e-9c2b-0123b6797b90_9b321643.jpg",
-    Brand:"bugati",
-    Model:"veyron",
-    Price:1000000,
-    speed:400,
-  },
+  let [data ,setdata] = useState([])
 
-])
+  async function getdata(){
+    let res =await fetch("http://localhost:8080/api/Cars")
+    let data =await res.json()
+    setdata(data)
+  }
+  useEffect(()=>{
+    getdata()
+
+  }, [])
+
   return (
 
     <div>
